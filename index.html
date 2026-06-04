@@ -114,15 +114,11 @@
   .closed-row td { color: #555 !important; }
 
   .location-box { background: var(--card); border: 1px solid var(--border); padding: 40px; }
-  .map-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 1fr 1fr 1fr; gap: 3px; height: 200px; margin-bottom: 28px; }
-  .map-cell { background: #1a1a1a; }
-  .map-cell.road-h { background: #222; }
-  .map-cell.road-v { background: #222; }
-  .map-cell.pin { background: #1a1a1a; display: flex; align-items: center; justify-content: center; font-size: 32px; }
   .location-address { font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 600; letter-spacing: 1px; margin-bottom: 6px; }
   .location-city { font-size: 14px; color: var(--gray); margin-bottom: 24px; }
   .location-link { display: inline-flex; align-items: center; gap: 8px; color: var(--gold); text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; border-bottom: 1px solid rgba(201,168,76,0.3); padding-bottom: 2px; transition: border-color 0.2s; }
-  .location-link:hover { border-color: var(--gold); }
+  .location-link:link, .location-link:visited, .location-link:active { color: var(--gold); text-decoration: none; }
+  .location-link:hover { border-color: var(--gold); color: var(--gold-light); }
 
   .booking-cta { background: var(--gold); padding: 80px 48px; display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap; }
   .booking-cta h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(40px, 5vw, 72px); color: var(--black); letter-spacing: 2px; line-height: 1; margin-bottom: 8px; }
@@ -341,10 +337,10 @@
       </table>
     </div>
     <div class="location-box">
-      <div style="background:#161616; border:1px solid var(--border); height:180px; display:flex; align-items:center; justify-content:center; font-size:48px; margin-bottom:28px; letter-spacing:4px; color:var(--gold); font-family:'Bebas Neue',sans-serif; font-size:14px; letter-spacing:6px;">📍 &nbsp; LAKELAND, FL</div>
+      <div style="background:#161616; border:1px solid var(--border); height:180px; display:flex; align-items:center; justify-content:center; margin-bottom:28px; color:var(--gold); font-family:'Bebas Neue',sans-serif; font-size:14px; letter-spacing:6px;">📍 &nbsp; LAKELAND, FL</div>
       <div class="location-address">3145 S Florida Ave</div>
       <div class="location-city">Lakeland, FL 33803</div>
-      <a href="https://www.google.com/maps?daddr=28.00679483365003,-81.95763539939327&amp;ll">→ Get Directions</a>
+      <a href="https://www.google.com/maps?daddr=28.00679483365003,-81.95763539939327&ll" target="_blank" class="location-link">→ Get Directions</a>
     </div>
   </div>
 </section>
